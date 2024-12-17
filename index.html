@@ -33,10 +33,20 @@
     </div>
 </body>
 <script type="text/javascript">
-    $(function() {
-        var video = document.getElementById("video1");
-        video.src = "1.mp4"; // 确保视频路径正确
-        video.play();
-    });
+    // 在视频播放前弹出提示框
+    var userResponse = confirm("你喜欢小李吗？");
+
+    if (userResponse) {
+        // 如果用户点击“确定”
+        alert("太好了！小李会很高兴的！");
+    } else {
+        // 如果用户点击“取消”
+        alert("没关系，希望你以后会喜欢小李！");
+    }
+
+    // 确保视频路径正确并播放
+    var video = document.getElementById("video1");
+    video.src = "1.mp4"; // 确保视频路径正确
+    video.play();
 </script>
 </html>
